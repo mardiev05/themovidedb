@@ -82,6 +82,12 @@ img.header__links-logo {
     font-size: 28px;
 }
 
+.container {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 200px;
+}
+
 
 /* ------------------section------------------------ */
 
@@ -89,9 +95,7 @@ section {
     background-image: url(images/main-section.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 90%;
     height: 300px;
-    margin: auto;
     padding: 4% 3%;
 }
 
@@ -143,4 +147,109 @@ section {
 
 #main__sec-btn:hover {
     color: #000;
+}
+
+
+/* ---------------popular------------- */
+
+.popular {
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.popular__selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.popular__selector-title {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: sans-serif;
+    margin-right: 3%;
+}
+
+.popular__selector-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+
+.popular__selector-link {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    font-family: sans-serif;
+    padding: 6px 17px;
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.popular__selector-link:hover {
+    background: #042541;
+    color: #60e5b8;
+}
+
+.popilur__last-link {
+    margin-right: 0;
+}
+
+.popular__selector-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow: scroll;
+}
+
+.popular__selector-card {
+    width: 13%;
+    height: fit-content;
+}
+
+.popular__selector-card img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.popular__selector-text {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.2;
+    padding: 6px;
+}
+
+.popular__selector-date {
+    color: #888;
+    font-size: 15px;
+    padding: 0px 6px;
+}
+
+.movie__selector-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12%;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+
+.trailers {
+    padding: 20px;
+    background-image: url(https://www.themoviedb.org/t/p/w710_and_h400_multi_faces/lnEU5KKrpQNsDaxxjDHuzRRh8Zl.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
