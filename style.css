@@ -152,25 +152,31 @@ section {
 
 /* ---------------popular------------- */
 
-.popular {
+.popular,
+.watch {
     margin-top: 50px;
     margin-left: 40px;
 }
 
-.popular__selector {
+.popular__selector,
+.watch__selector,
+.trailers__selector {
     display: flex;
     align-items: center;
     margin-bottom: 25px;
 }
 
-.popular__selector-title {
+.popular__selector-title,
+.watch__selector-title,
+.trailers__selector-title {
     font-size: 24px;
     font-weight: 500;
     font-family: sans-serif;
     margin-right: 3%;
 }
 
-.popular__selector-links {
+.popular__selector-links,
+.trailers__selector-links {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -179,7 +185,9 @@ section {
     border-radius: 20px;
 }
 
-.popular__selector-link {
+.popular__selector-link,
+.watch__selector-link,
+.trailers__selector-link {
     font-size: 18px;
     font-weight: 400;
     color: #000;
@@ -193,16 +201,19 @@ section {
     -o-transition: .3s ease-in-out;
 }
 
-.popular__selector-link:hover {
+.popular__selector-link:hover,
+.watch__selector-link:hover {
     background: #042541;
     color: #60e5b8;
 }
 
-.popilur__last-link {
+.popilur__last-link,
+.trailers__last-link {
     margin-right: 0;
 }
 
-.popular__selector-row {
+.popular__selector-row,
+.watch__selector-row {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -210,13 +221,15 @@ section {
     overflow: scroll;
 }
 
-.popular__selector-card {
+.popular__selector-card,
+.watch__selector-card {
     width: 13%;
     height: fit-content;
     margin-right: 2%;
 }
 
-.popular__selector-card img {
+.popular__selector-card img,
+.watch__selector-card img {
     width: 100%;
     height: 80%;
     border-radius: 10px;
@@ -226,14 +239,16 @@ section {
     -o-border-radius: 10px;
 }
 
-.popular__selector-text {
+.popular__selector-text,
+.watch__selector-text {
     font-size: 18px;
     font-weight: bold;
     line-height: 1.2;
     padding: 6px;
 }
 
-.popular__selector-date {
+.popular__selector-date,
+.watch__selector-date {
     color: #888;
     font-size: 15px;
     padding: 0px 6px;
@@ -248,15 +263,16 @@ section {
     border-radius: 20px;
 }
 
+
+/* latest trailers */
+
 .trailers {
     padding: 20px 20px 55px 20px;
     background-image: url(images/main-section.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 50px;
 }
-
-
-/* latest trailers */
 
 .trailers__selector-row {
     width: 100%;
@@ -264,19 +280,19 @@ section {
     justify-content: space-between;
 }
 
-.trailers .popular__selector-title {
+.trailers__selector-title {
     color: #fff;
 }
 
-.trailers .popular__selector-links {
+.trailers__selector-links {
     border: 1px solid #0e867a;
 }
 
-.trailers .popular__selector-link {
+.trailers__selector-link {
     color: #fff;
 }
 
-.trailers .popular__selector-link:hover {
+.trailers__selector-link:hover {
     color: #000;
     background-color: #b2faca;
 }
