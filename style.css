@@ -106,17 +106,19 @@ section {
 }
 
 
-/* popular, freeWatch */
+/* popular, freeWatch and tranding */
 
 .popular__selector,
-.freeWatch__selector {
+.freeWatch__selector,
+.tranding__selector {
     display: flex;
     align-items: center;
     margin: 2% 1%;
 }
 
 .popular__selector-title,
-.freeWatch__selector-title {
+.freeWatch__selector-title,
+.tranding__selector-title {
     margin-right: 20px;
     white-space: nowrap;
     font-size: 24px;
@@ -124,7 +126,8 @@ section {
 }
 
 .popular__selector-links,
-.freeWatch__selector-links {
+.freeWatch__selector-links,
+.tranding__selector-links {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
@@ -134,7 +137,8 @@ section {
 }
 
 .popular__selector-link,
-.freeWatch__selector-link {
+.freeWatch__selector-link,
+.tranding__selector-link {
     display: inline-flex;
     align-content: center;
     align-items: center;
@@ -153,7 +157,8 @@ section {
 }
 
 .popular__selector-link:hover,
-.freeWatch__selector-link:hover {
+.freeWatch__selector-link:hover,
+.tranding__selector-link:hover {
     background-color: #042541;
     color: #a8f9c8;
     border-radius: 30px;
@@ -164,7 +169,8 @@ section {
 }
 
 .popular__selector-row,
-.freeWatch__selector-row {
+.freeWatch__selector-row,
+.tranding__selector-row {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -173,19 +179,22 @@ section {
 }
 
 .popular__selector-card,
-.freeWatch__selector-card {
+.freeWatch__selector-card,
+.tranding__selector-card {
     width: 14%;
     min-width: 14%;
     margin-left: 20px;
 }
 
 .popular__selector-card img,
-.freeWatch__selector-card img {
+.freeWatch__selector-card img,
+.tranding__selector-card img {
     width: 100%;
 }
 
 .popular__selector-text,
-.freeWatch__selector-text {
+.freeWatch__selector-text,
+.tranding__selector-text {
     font-size: 18px;
     font-weight: bold;
     line-height: 1.2;
@@ -199,12 +208,14 @@ section {
 }
 
 .popular__selector-text:hover,
-.freeWatch__selector-text:hover {
+.freeWatch__selector-text:hover,
+.tranding__selector-text:hover {
     color: #09c6e7;
 }
 
 .popular__selector-date,
-.freeWatch__selector-date {
+.freeWatch__selector-date,
+.tranding__selector-date {
     color: #888;
     font-size: 15px;
     padding: 0px 6px;
@@ -314,4 +325,14 @@ section {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+}
+
+
+/* tranding */
+
+.tranding {
+    margin: 70px 0;
+    background-image: url(images/trending.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
