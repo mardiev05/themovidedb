@@ -427,10 +427,20 @@ section {
     line-height: 1.7;
 }
 
+.board__row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
 .board__card {
     display: flex;
     align-items: center;
     width: 50%;
+    min-width: 50%;
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
 }
 
 .board__card-img {
@@ -453,13 +463,21 @@ section {
     width: 100%;
 }
 
-.jinbvcx {
+.jinbvcx,
+.banana,
+.bahbugandHum,
+.kuroneko45,
+.talestalker,
+.liberte,
+.patrick,
+.razieWod,
+.ritx {
     display: flex;
     align-items: center;
 }
 
 .board__card-lineTop {
-    width: 20%;
+    width: 8%;
     height: 8px;
     background-color: #86edbe;
     border-radius: 30px;
@@ -469,6 +487,134 @@ section {
 .board__card-lineBottom {
     background-color: #f1936c;
     width: 90%;
+    height: 8px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.banana .board__card-lineTop {
+    width: 85%;
+    height: 8px;
+    background-color: #86edbe;
+    border-radius: 30px;
+    margin: 4px 10px 4px 0;
+}
+
+.banana .board__card-lineBottom {
+    background-color: #f1936c;
+    width: 87%;
+    height: 8px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.bahbugandHum .board__card-lineTop {
+    width: 9%;
+    height: 8px;
+    background-color: #86edbe;
+    border-radius: 30px;
+    margin: 4px 10px 4px 0;
+}
+
+.bahbugandHum .board__card-lineBottom {
+    background-color: #f1936c;
+    width: 75%;
+    height: 8px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.kuroneko45 .board__card-lineTop {
+    width: 8%;
+    height: 8px;
+    background-color: #86edbe;
+    border-radius: 30px;
+    margin: 4px 10px 4px 0;
+}
+
+.kuroneko45 .board__card-lineBottom {
+    background-color: #f1936c;
+    width: 72%;
+    height: 8px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.talestalker .board__card-lineTop {
+    width: 30%;
+    height: 8px;
+    background-color: #86edbe;
+    border-radius: 30px;
+    margin: 4px 10px 4px 0;
+}
+
+.talestalker .board__card-lineBottom {
+    background-color: #f1936c;
+    width: 70%;
+    height: 8px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.liberte .board__card-lineTop {
+    width: 8%;
+    height: 8px;
+    background-color: #86edbe;
+    border-radius: 30px;
+    margin: 4px 10px 4px 0;
+}
+
+.liberte .board__card-lineBottom {
+    background-color: #f1936c;
+    width: 67%;
+    height: 8px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.patrick .board__card-lineTop {
+    width: 8%;
+    height: 8px;
+    background-color: #86edbe;
+    border-radius: 30px;
+    margin: 4px 10px 4px 0;
+}
+
+.patrick .board__card-lineBottom {
+    background-color: #f1936c;
+    width: 60%;
+    height: 8px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.razieWod .board__card-lineTop {
+    width: 8%;
+    height: 8px;
+    background-color: #86edbe;
+    border-radius: 30px;
+    margin: 4px 10px 4px 0;
+}
+
+.razieWod .board__card-lineBottom {
+    background-color: #f1936c;
+    width: 57%;
+    height: 8px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.ritx .board__card-lineTop {
+    width: 8%;
+    height: 8px;
+    background-color: #86edbe;
+    border-radius: 30px;
+    margin: 4px 10px 4px 0;
+}
+
+.ritx .board__card-lineBottom {
+    background-color: #f1936c;
+    width: 57%;
     height: 8px;
     border-radius: 30px;
     margin-right: 10px;
