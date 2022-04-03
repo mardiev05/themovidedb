@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+    <link rel="stylesheet" href="search.css" />
+    <title>Search</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <ul class="header__links">
+            <img class="header__links-logo" src="images/header-icon.svg" alt="TMDB" />
+            <li>
+                <a class="header__link" href="">Movies</a>
+            </li>
+            <li>
+                <a class="header__link" href="">TV Shows</a>
+            </li>
+            <li>
+                <a class="header__link" href="">People</a>
+            </li>
+            <li>
+                <a class="header__link" href="">More</a>
+            </li>
+        </ul>
+
+        <!-- header login -->
+        <ul class="header__logins">
+            <li>
+                <a class="header__logins-plus header__link" href="#"><i class="fa-solid fa-plus"></i
+          ></a>
+            </li>
+            <li>
+                <a class="header__logins-lang header__link" href="#">EN</a>
+            </li>
+            <li>
+                <a class="header__link" href="#">Login</a>
+            </li>
+            <li>
+                <a class="header__link" href="#">Join TMDB</a>
+            </li>
+            <li>
+                <a class="header__logins-search header__link" href="#"><i class="fa-solid fa-magnifying-glass"></i
+          ></a>
+            </li>
+        </ul>
+    </header>
+
+    <ul class="search">
+        <li class="search__input">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" placeholder="Search for a movie, tv show, person..." />
+        </li>
+    </ul>
+
+    <section>
+        <div class="search__results">
+            <h3 class="search__results-title">Search Results</h3>
+
+            <ul class="search__menu">
+                <li class="selected">
+                    <a class="search__tab" href="#">Movies</a>
+                </li>
+                <li class="selected">
+                    <a class="search__tab" href="#">TV Show</a>
+                </li>
+                <li class="selected">
+                    <a class="search__tab" href="#">People</a>
+                </li>
+                <li class="selected">
+                    <a class="search__tab" href="#">Companies</a>
+                </li>
+                <li class="selected">
+                    <a class="search__tab" href="#">Keywords</a>
+                </li>
+                <li class="selected">
+                    <a class="search__tab" href="#">Collections</a>
+                </li>
+                <li class="selected">
+                    <a class="search__tab" href="#">Networks</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/rHSrw8yPuuWbtVhTiCTHllVxMIA.jpg" alt="" />
+                <div class="card__content">
+                    <h3 class="card__title">The Movie</h3>
+                    <p class="card__date">Jun 12, 2022</p>
+                    <p class="card__text">
+                        In the near future, society collapses and water becomes scarce. When a greedy water baron starts violently clearing out survivors, Kendal, a 17-year-old teenager, fights the baron's henchman to keep a well open.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <img class="footer__logo" src="images/footer.svg" alt="" />
+
+        <div class="footer__row">
+            <div class="footer__card">
+                <h3 class="footer__card-title">THE BESICS</h3>
+                <a class="footer__link" href="#">About TMDB</a>
+                <a class="footer__link" href="#">Contact Us</a>
+                <a class="footer__link" href="#">Support Forums</a>
+                <a class="footer__link" href="#">API</a>
+                <a class="footer__link" href="#">System Status</a>
+            </div>
+
+            <div class="footer__card">
+                <h3 class="footer__card-title">GET INVOLVET</h3>
+                <a class="footer__link" href="#">Contribution Bible</a>
+                <a class="footer__link" href="#">Add New Movie</a>
+                <a class="footer__link" href="#">Add New TV Show</a>
+            </div>
+
+            <div class="footer__card">
+                <h3 class="footer__card-title">COMMUNITY</h3>
+                <a class="footer__link" href="">Guidelines</a>
+                <a class="footer__link" href="">Discussion</a>
+                <a class="footer__link" href="">Leaderboard</a>
+                <a class="footer__link" href="">Twitter</a>
+            </div>
+
+            <div class="footer__card">
+                <h3 class="footer__card-title">LEGAL</h3>
+                <a class="footer__link" href="#">Terms of Use</a>
+                <a class="footer__link" href="#">API Terms of Use</a>
+                <a class="footer__link" href="#">Privacy Policy </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
