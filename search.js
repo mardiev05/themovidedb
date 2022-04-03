@@ -35,3 +35,6 @@ search.addEventListener("change", () => {
         }
     })();
 });
+
+let va = localStorage.getItem("value");
+console.log(va);

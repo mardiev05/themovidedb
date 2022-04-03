@@ -100,9 +100,12 @@
         width: 10%;
         border-radius: 30px;
         border: none;
-        font-size: 17px;
+        font-size: 20px;
         color: #fff;
         background: #19cdb7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     /* popular, freeWatch and tranding */
     
