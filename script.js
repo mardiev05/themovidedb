@@ -19,7 +19,7 @@ let trandingRow = document.querySelector(".tranding__selector-row");
             <img
             src="${imgUrl}${movie.poster_path}" alt="${movie.name}"/>
             <p class="popular__selector-text">${movie.title}</p>
-            <p class="popular__selector-date">${movie.title}</p>
+            <p class="popular__selector-date">${movie.release_date}</p>
             </div>
             `;
             row.innerHTML += card;
@@ -38,7 +38,7 @@ let trandingRow = document.querySelector(".tranding__selector-row");
                     <p class="freeWatch__selector-text">
                         ${top.title}
                     </p>
-                    <p class="freeWatch__selector-date">${top.title}</p>
+                    <p class="freeWatch__selector-date">${top.release_date}</p>
                 </div>`;
             freeWatch.innerHTML += cards;
         }
@@ -54,7 +54,7 @@ let trandingRow = document.querySelector(".tranding__selector-row");
                 <div class="trailers__selector-card">
                     <img src="${imgUrl}${letests.poster_path}" alt="${letests.name}" />
                     <p class="trailers__selector-text">${letests.title}</p>
-                    <p class="trailers__selector-date">${letests.title}</p>
+                    <p class="trailers__selector-date">${letests.release_date}</p>
                 </div>
                 `;
             trailers.innerHTML += cards;
@@ -70,8 +70,8 @@ let trandingRow = document.querySelector(".tranding__selector-row");
             let cards = `
             <div class="tranding__selector-card">
             <img src="${imgUrl}${trand.poster_path}" alt="${trand.name}" />
-            <p class="tranding__selector-text">${trand.title}</p>
-            <p class="tranding__selector-date">${trand.title}</p>
+            <p class="tranding__selector-text">${trand.original_name}</p>
+            <p class="tranding__selector-date">${trand.first_air_date}</p>
         </div>
             `;
             trandingRow.innerHTML += cards;
