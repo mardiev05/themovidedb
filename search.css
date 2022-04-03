@@ -79,6 +79,8 @@ section {
     margin-top: 135px;
     padding: 0 60px;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .search__results {
@@ -86,6 +88,7 @@ section {
     width: 20%;
     border-radius: 10px;
     box-shadow: inset 3px 3px 30px #f1f1f1, 3px 3px 30px rgb(0 0 0 / 16%);
+    height: fit-content;
 }
 
 .search__results-title {
@@ -117,6 +120,55 @@ section {
 .search__tab {
     font-size: 20px;
     color: #000;
+}
+
+
+/* row */
+
+.row {
+    width: 78%;
+    padding: 10px 0;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    height: 165px;
+    border-radius: 10px;
+    box-shadow: inset 3px 3px 30px #f1f1f1, 3px 3px 30px rgb(0 0 0 / 16%);
+    margin-bottom: 2%;
+}
+
+.card img {
+    height: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.card__content {
+    margin-left: 2%;
+}
+
+.card__title {
+    font-size: 1.2em;
+    line-height: 1.2em;
+    cursor: pointer;
+}
+
+.card__date {
+    font-size: 1em;
+    color: #888;
+    margin: 1% 0 3% 0;
+}
+
+.card__text {
+    font-size: 1.1em;
+    color: #4e4848;
+    font-family: serif;
 }
 
 
