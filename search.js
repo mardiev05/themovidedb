@@ -15,16 +15,16 @@ search.addEventListener("change", () => {
             let data = await res.json();
             console.log(data);
 
+            row.innerHTML = "<div />";
+
             for (let result of data.results) {
                 let card = `
                 <div class="card">
                 <img src="${imgUrl}${result.poster_path}" alt="${result.name}" />
                 <div class="card__content">
-                    <h3 class="card__title">The Last Survivors</h3>
-                    <p class="card__date">Jun 12, 2022</p>
-                    <p class="card__text">
-                        In the near future, society collapses and water becomes scarce. When a greedy water baron starts violently clearing out survivors, Kendal, a 17-year-old teenager, fights the baron's henchman to keep a well open.
-                    </p>
+                    <h3 class="card__title">${result.title}</h3>
+                    <p class="card__date">${result.release_date}</p>
+                    <p class="card__text">${result.overview}</p>
                 </div>
             </div>
                 `;

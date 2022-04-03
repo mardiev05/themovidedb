@@ -7,12 +7,12 @@ let trandingRow = document.querySelector(".tranding__selector-row");
 
 (async function() {
     try {
+        // Popular
         let movies = await fetch(
             "https://api.themoviedb.org/3/movie/popular?api_key=2cf8f0300d87595c63b0fe796e506522&language=en-US&page=1"
         );
         let resMovies = await movies.json();
 
-        // Popular
         for (let movie of resMovies.results) {
             let card = `
             <div class="popular__selector-card">
@@ -80,14 +80,17 @@ let trandingRow = document.querySelector(".tranding__selector-row");
         console.log(err);
     }
 })();
+
 let onTv = document.querySelector(".onTv");
 
 onTv.addEventListener("click", function onTv() {
     (async function() {
         let res = await fetch(
-            "https://api.themoviedb.org/3/tv/on_the_air?api_key=2cf8f0300d87595c63b0fe796e506522&language=en-US&page=1"
+            "https://api.themoviedb.org/3/movie/top_rated?api_key=2cf8f0300d87595c63b0fe796e506522&language=en-US&page=1"
         );
         let data = await res.json();
+
+        row.innerHTML = "<div />";
 
         for (let img of data.results) {
             let cards = `
@@ -95,7 +98,7 @@ onTv.addEventListener("click", function onTv() {
             <img
             src="${imgUrl}${img.poster_path}" alt="${img.name}"/>
             <p class="popular__selector-text">${img.title}</p>
-            <p class="popular__selector-date">${img.title}</p>
+            <p class="popular__selector-date">${img.release_date}</p>
             </div>
             `;
             row.innerHTML += cards;
@@ -104,3 +107,8 @@ onTv.addEventListener("click", function onTv() {
         console.log(data);
     })();
 });
+
+let searchInput = document.querySelector("#main__sec-input");
+let subBtn = document.querySelector("#main__sec-btn");
+
+subBtn.addEventListener("click", () => {});
