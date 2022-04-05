@@ -2,18 +2,29 @@ let search = document.querySelector("#search__inp");
 let row = document.querySelector(".row");
 let imgUrl = "https://image.tmdb.org/t/p/w500/";
 
+// search.value = va;
+
+window.addEventListener("load", (e) => {
+    let query = localStorage.getItem("query");
+    search.value = query;
+    searchMovies(query);
+});
+
 search.addEventListener("change", () => {
     let searchValue = search.value;
     console.log(searchValue);
+    searchMovies(searchValue);
+});
+
+function searchMovies(query) {
     (async() => {
         try {
             let res = await fetch(
                 "https://api.themoviedb.org/3/search/movie?api_key=2cf8f0300d87595c63b0fe796e506522&language=en-US&query=" +
-                searchValue +
+                query +
                 "&page=1&include_adult=false"
             );
             let data = await res.json();
-            console.log(data);
 
             row.innerHTML = "<div />";
 
@@ -34,7 +45,4 @@ search.addEventListener("change", () => {
             console.log(err);
         }
     })();
-});
-
-let va = localStorage.getItem("value");
-console.log(va);
+}
