@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    list-style: none;
 }
 
 
@@ -51,6 +50,137 @@ header li {
 }
 
 
+/* about */
+
+.about {
+    margin-top: 6%;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+    background-color: red;
+}
+
+.about__img {
+    width: 25%;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 3px 3px 30px rgb(0 0 0 / 16%);
+}
+
+.about__img .about__main-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+}
+
+.about__img-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.about__img-detail img {
+    width: 10%;
+    height: 35px;
+    margin-right: 3%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+
+/* about content */
+
+.about__content {
+    width: 70%;
+    color: #fff;
+}
+
+.about__content a {
+    color: #fff;
+}
+
+.about__content-title a {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.about__dates,
+.about__icons {
+    display: flex;
+    align-items: center;
+    margin: 5px 0 15px 0;
+}
+
+.about__dates li {
+    margin-right: 3%;
+}
+
+.about__icons li {
+    list-style: none;
+    margin-right: 3%;
+}
+
+li.icon {
+    border-radius: 50%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #042541;
+    width: 5%;
+}
+
+.about__icons .play {
+    list-style-type: disclosure-closed;
+}
+
+.about__slogan {
+    color: #fff;
+    margin-bottom: 0;
+    font-size: 1.1em;
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.overview__title {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.overview__text {
+    font-size: 1em;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.overvieww__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.overview__card {
+    width: 33%;
+    margin-bottom: 30px;
+}
+
+
 /* footer */
 
 footer {
@@ -60,6 +190,7 @@ footer {
     width: 100%;
     background-color: #03233d;
     height: 300px;
+    margin-top: 300px;
 }
 
 .footer__logo {
