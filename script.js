@@ -5,6 +5,14 @@ let row = document.querySelector(".popular__selector-row");
 let freeWatch = document.querySelector(".freeWatch__selector-row");
 let trailers = document.querySelector(".trailers__selector-row");
 let trandingRow = document.querySelector(".tranding__selector-row");
+let headerLogo = document.querySelector(".header__links-logo");
+
+// header logo
+headerLogo.addEventListener("click", (e) => {
+    e.preventDefault();
+    location.reload();
+});
+// ====
 
 async function loadMovies(endpoint, container) {
     let res = await fetch(`${endpoint}`);
@@ -15,13 +23,18 @@ async function loadMovies(endpoint, container) {
     for (let img of data.results) {
         let cards = `
         <div class="popular__selector-card">
-            <img src="${imgUrl}${img.poster_path}" alt="${img.name}"/>
+        <a href="./detaile.html" > <img onclick="getId(${img.id})" src="${imgUrl}${img.poster_path}" alt="${img.name}"/></a>
             <p class="popular__selector-text">${img.title}</p>
             <p class="popular__selector-date">${img.release_date}</p>
         </div>
         `;
         container.innerHTML += cards;
     }
+}
+
+function getId(id) {
+    localStorage.setItem("id", id);
+    console.log(id);
 }
 
 loadMovies(

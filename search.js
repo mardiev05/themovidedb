@@ -2,7 +2,14 @@ let search = document.querySelector("#search__inp");
 let row = document.querySelector(".row");
 let imgUrl = "https://image.tmdb.org/t/p/w500/";
 
-// search.value = va;
+// geader logo
+let headerLogo = document.querySelector(".header__links-logo");
+
+headerLogo.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.assign("http://127.0.0.1:5500/main.html");
+});
+// ===
 
 window.addEventListener("load", (e) => {
     let query = localStorage.getItem("query");
