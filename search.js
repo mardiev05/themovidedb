@@ -2,7 +2,7 @@ let search = document.querySelector("#search__inp");
 let row = document.querySelector(".row");
 let imgUrl = "https://image.tmdb.org/t/p/w500/";
 
-// geader logo
+// header logo
 let headerLogo = document.querySelector(".header__links-logo");
 
 headerLogo.addEventListener("click", (e) => {

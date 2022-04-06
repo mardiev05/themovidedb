@@ -52,13 +52,33 @@ header li {
 
 /* about */
 
+.bgImg {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .about {
     margin-top: 6%;
     display: flex;
     justify-content: space-around;
     width: 100%;
     padding: 20px;
-    background-color: red;
+    font-family: sans-serif;
+}
+
+.about__cont {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.bgImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    filter: blur(4px);
+    z-index: -1;
 }
 
 .about__img {
@@ -70,7 +90,6 @@ header li {
 
 .about__img .about__main-img {
     width: 100%;
-    height: 500px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
     -webkit-border-radius: 10px 10px 0 0;
@@ -95,6 +114,10 @@ header li {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+}
+
+.about__img-detail p {
+    color: #fff;
 }
 
 
@@ -176,8 +199,21 @@ li.icon {
 }
 
 .overview__card {
-    width: 33%;
-    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 5%;
+}
+
+.overview__img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #0f81e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
