@@ -217,6 +217,52 @@ li.icon {
 }
 
 
+/* section */
+
+section {
+    padding: 40px;
+}
+
+.content__cast-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    overflow: scroll;
+    padding-bottom: 30px;
+}
+
+.cast__row-card {
+    width: 15%;
+    min-width: 15%;
+    margin-right: 2%;
+    border-radius: 10px;
+    box-shadow: inset 3px 3px 30px #f1f1f1, 3px 3px 30px rgb(0 0 0 / 16%);
+}
+
+.cast__row-card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.cast__card-texts {
+    padding: 8px;
+    font-family: sans-serif;
+}
+
+.cast__name {
+    font-size: 1em;
+    overflow: hidden;
+    line-height: 20px;
+}
+
+.cast__text {
+    font-size: 0.9em;
+    line-height: 15px;
+    color: #999;
+}
+
+
 /* footer */
 
 footer {
