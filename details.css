@@ -361,6 +361,34 @@
         border-radius: 20px;
         margin-top: 3%;
     }
+    /* season */
+    
+    .season__content-row {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        box-shadow: inset 3px 3px 30px #f1f1f1, 3px 3px 30px rgb(0 0 0 / 16%);
+        font-family: sans-serif;
+    }
+    
+    .season__content-img {
+        width: 12%;
+        font-size: 0;
+        margin-right: 2%;
+    }
+    
+    .season__content-img img {
+        width: 100%;
+        border-radius: 10px 0 0 10px;
+        -webkit-border-radius: 10px 0 0;
+        -moz-border-radius: 10px 0 0;
+        -ms-border-radius: 10px 0 0;
+        -o-border-radius: 10px 0 0;
+    }
+    
+    .season__written.written {
+        margin-bottom: 10%;
+    }
     /* Social */
     
     .social {
@@ -372,7 +400,13 @@
         align-items: center;
     }
     
-    .social__title {
+    .season {
+        margin-top: 5%;
+    }
+    
+    .social__title,
+    .cast__title,
+    .season__title {
         font-size: 1.5em;
         font-weight: 600;
         margin-right: 3%;
@@ -409,7 +443,7 @@
     }
     /* social review */
     
-    .social__review {
+    .socail__discussion {
         display: none;
     }
     
