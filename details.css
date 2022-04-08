@@ -391,6 +391,42 @@
         color: #000;
         font-weight: 600;
     }
+    /* social discussion */
+    
+    .discussion__open {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+        padding: 8px 12px;
+        box-shadow: inset 3px 3px 30px #f1f1f1, 3px 3px 30px rgb(0 0 0 / 16%);
+        font-family: sans-serif;
+    }
+    
+    .social__discussion-link img {
+        width: 40px;
+        border-radius: 50%;
+        margin-right: 2%;
+    }
+    
+    .social__discussion-link a {
+        font-size: 1em;
+        font-weight: normal;
+        color: #636060;
+    }
+    
+    .social__discussion-link {
+        display: flex;
+        align-items: center;
+        width: -webkit-fill-available;
+        width: 50%;
+    }
+    
+    .discussion__open p {
+        font-size: 1em;
+        font-weight: 300;
+        color: #888;
+    }
     /* section score */
     
     .section__scores {
