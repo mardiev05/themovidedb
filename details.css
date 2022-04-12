@@ -63,7 +63,6 @@
         position: absolute;
         top: 1px;
         right: 0;
-        opacity: 0;
         transform: translateY(3px);
     }
     
@@ -305,7 +304,6 @@
     .content__cast-row {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         width: 100%;
         overflow: scroll;
         padding-bottom: 30px;
@@ -445,10 +443,6 @@
         margin-right: 2%;
     }
     /* social review */
-    
-    .hide {
-        display: none;
-    }
     
     .social__content-feature {
         font-weight: 300;
@@ -693,6 +687,12 @@
         border-radius: 4px;
         display: inline-block;
         margin-right: 5%;
+        margin-bottom: 2%;
+    }
+    /* hide */
+    
+    .hide {
+        display: none;
     }
     /* footer */
     

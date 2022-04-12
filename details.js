@@ -29,6 +29,10 @@ let recommendation =
     "https://api.themoviedb.org/3/movie/" +
     getItem +
     "/recommendations?api_key=2cf8f0300d87595c63b0fe796e506522&language=en-US&page=1";
+let keyword =
+    "https://api.themoviedb.org/3/movie/" +
+    getItem +
+    "/keywords?api_key=2cf8f0300d87595c63b0fe796e506522&language=en-US";
 
 (async() => {
         let res = await fetch(`${movie}`);
@@ -108,32 +112,45 @@ let recommendation =
 
             <div class="language">
                 <h5 class="language__title">Language</h5>
-                <p class="language__text">${detailes.original_language}</p>
+                <p class="language__text">${
+                  detailes?.original_language == "en"
+                    ? "English"
+                    : detailes?.original_language
+                }</p>
             </div>
 
             <div class="budget">
                 <h5 class="budget__title">Budget</h5>
-                <p class="budget__text">$1,000,000</p>
+                <p class="budget__text">$${detailes.budget}</p>
             </div>
 
             <div class="revenue">
                 <h5 class="revenue__title">Revenue</h5>
-                <p class="revenue__text">$1,000,000</p>
-            </div>
-
-            <div class="keyword">
-                <h5 class="keyword__title">Keywords</h5>
-                <div class="keyword__row">
-                    <div class="keyword__card">
-                        sequel
-                    </div>
-                    <div class="keyword__card">
-                        based on video game
-                    </div>
-                </div>
+                <p class="revenue__text">$${detailes?.revenue}</p>
             </div>
     `;
-  document.querySelector(".section__scores").innerHTML = status;
+  let scoreSection = (document.querySelector(".section__scores").innerHTML =
+    status);
+
+  let keywordData = await fetch(`${keyword}`);
+  let keywordDataJson = await keywordData.json();
+  console.log(keywordDataJson);
+
+  let keywordDataHtml = `
+                 <div class="keyword">
+                <h5 class="keyword__title">Keywords</h5>
+                <div class="keyword__row">
+                    
+                        ${keywordDataJson.keywords.map((item) => {
+                          return `<div class="keyword__card">
+                            ${item.name}
+                            </div>`;
+                        })}
+                </div>
+            </div>
+  `;
+  document.querySelector(".section__scores").innerHTML =
+    status + keywordDataHtml;
 })();
 
 (async () => {
@@ -151,7 +168,10 @@ let recommendation =
                 </div>
             </div >
         `;
-    section.innerHTML += card;
+
+    if (item.profile_path) {
+      section.innerHTML += card;
+    }
   }
 })();
 
@@ -159,34 +179,41 @@ let recommendation =
   try {
     let res = await fetch(`${reviews}`);
     let data = await res.json();
-    // console.log(data);
+    console.log(data);
     const date = new Date(data.results[0].updated_at);
     let review = `
                 
                 <div class="social__content-review">
                     <div class="social__content-img">
                         <img src="${
-                          data.results[0].author_details.avatar_path
+                          data.results[0]?.author_details?.avatar_path
+                            ?.slice(1)
+                            .split("/").length > 2
+                            ? data.results[0]?.author_details?.avatar_path.slice(
+                                1
+                              )
+                            : imgUrl +
+                              data.results[0]?.author_details?.avatar_path
                         }" alt="" />
                     </div>
                     <div class="social__content">
                         <div class="social__content-rating">
                             <a class="social__content-title" href="#">A review by ${
-                              data.results[0].author
+                              data.results[0]?.author
                             }</a>
                             <span class="rounded__rating">
                                 <i class="fa-solid fa-star"></i> ${
-                                  data.results[0].author_details.rating
+                                  data.results[0]?.author_details.rating ?? 1
                                 }.0
                             </span>
                         </div>
                         <p class="written">
                             Written by <b class="bold">${
-                              data.results[0].author_details.username
+                              data.results[0]?.author_details.username
                             }</b> on ${date.toDateString()}
                         </p>
                         <p class="text" translate="yes">
-                            ${data.results[0].content}
+                            ${data.results[0]?.content}
                         </p>
                     </div>
                 </div>
@@ -227,10 +254,13 @@ let recommendation =
                             <a class="recommendation__card-title" href="#">${
                               item.title
                             }</a>
-                            <p class="num">75%</p>
+                            <p class="num">${
+                              item.vote_average.toFixed(1) * 10
+                            }%</p>
                         </div>
                     </div>
             `;
+
       document.querySelector(".recommendation__content-row").innerHTML += card;
     }
   } catch (err) {
@@ -238,7 +268,7 @@ let recommendation =
   }
 })();
 
-let discussionCard = document.querySelector(".social__discussion");
+let discussionCard = document.querySelector(".socail__discussion");
 let socialCard = document.querySelector(".social__review-mainCard");
 let discussionLink = document.getElementById("discussions");
 let reviewLink = document.getElementById("reviews");
@@ -246,12 +276,11 @@ let reviewLink = document.getElementById("reviews");
 discussionLink.addEventListener("click", () => {
   socialCard.classList.add("hide");
   discussionCard.classList.remove("hide");
-  console.log("discussion");
 });
+console.log(discussionCard);
 reviewLink.addEventListener("click", () => {
   socialCard.classList.remove("hide");
   discussionCard.classList.add("hide");
-  console.log("discussion");
 });
 
 // header logo
