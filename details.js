@@ -90,14 +90,16 @@ let keyword =
                 ${detailes.overview}
                 </p>
                 <div class="overvieww__row">
-                    ${detailes.production_companies.map((item) => {
-                      return `<div class="overview__card">
+                    ${detailes.production_companies
+                      .map((item) => {
+                        return `<div class="overview__card">
                             <div class="overview__img">
                                 <img src="${imgUrl}${item.logo_path}" style=" width:50px">
                             </div>
                             <p class="overview__pos">${item.name}</p>
                         </div>`;
-                    })}
+                      })
+                      .join("")}
                 </div>
             </div>
         </div>
@@ -129,28 +131,20 @@ let keyword =
                 <p class="revenue__text">$${detailes?.revenue}</p>
             </div>
     `;
-  let scoreSection = (document.querySelector(".section__scores").innerHTML =
-    status);
+
+  let cont = document.querySelector(".score__contents");
+  cont.innerHTML = status;
 
   let keywordData = await fetch(`${keyword}`);
   let keywordDataJson = await keywordData.json();
   console.log(keywordDataJson);
 
-  let keywordDataHtml = `
-                 <div class="keyword">
-                <h5 class="keyword__title">Keywords</h5>
-                <div class="keyword__row">
-                    
-                        ${keywordDataJson.keywords.map((item) => {
-                          return `<div class="keyword__card">
-                            ${item.name}
-                            </div>`;
-                        })}
-                </div>
-            </div>
-  `;
-  document.querySelector(".section__scores").innerHTML =
-    status + keywordDataHtml;
+  let scoreRow = document.querySelector(".section__scores");
+  console.log(scoreRow);
+  for (let item of keywordDataJson.keywords) {
+    let a = ` <div class="keyword__card">${item.name}</div>`;
+    scoreRow.innerHTML += a;
+  }
 })();
 
 (async () => {
